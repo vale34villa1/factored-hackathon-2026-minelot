@@ -3,13 +3,36 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
+  --background: 40 14% 96%;
+  --surface: 0 0% 100%;
+  --foreground: 24 10% 10%;
+  --muted: 40 10% 92%;
+  --muted-foreground: 25 6% 38%;
+  --border: 35 10% 86%;
+  --primary: 32 95% 34%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 215 25% 27%;
+  --risk-critical: 0 72% 45%;
+  --risk-high: 22 90% 48%;
+  --risk-medium: 43 90% 46%;
+  --risk-low: 150 55% 34%;
 }
 
-body {
-  @apply bg-slate-950 text-slate-100;
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
 }
 
-* {
-  @apply scroll-smooth;
+@layer components {
+  .card {
+    @apply rounded-lg border border-border bg-surface;
+  }
+  .label-tag {
+    @apply inline-flex items-center rounded px-1.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-wider;
+  }
 }

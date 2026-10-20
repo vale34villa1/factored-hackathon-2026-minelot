@@ -1,0 +1,116 @@
+[
+  {
+    "id": "DOC-001",
+    "title": "Truck Dispatch & Queue Management Procedure (SOP-DSP-04)",
+    "type": "procedure",
+    "tags": [
+      "waiting",
+      "queue",
+      "dispatch",
+      "shovel",
+      "production"
+    ],
+    "content": "Queue time at loading units should remain below 8% of truck operating hours. When queue time exceeds 12% for more than two consecutive shifts, the dispatcher must rebalance truck-shovel assignments and review shovel cycle times."
+  },
+  {
+    "id": "DOC-002",
+    "title": "Maintenance Prioritisation Standard (MNT-STD-11)",
+    "type": "policy",
+    "tags": [
+      "maintenance",
+      "downtime",
+      "inspection",
+      "vibration",
+      "risk"
+    ],
+    "content": "Equipment with a vibration index above 5.0 or more than 8 hours of unplanned downtime in a rolling 7-day window must be scheduled for inspection before the next shift. Safety-critical findings require supervisor sign-off before return to service."
+  },
+  {
+    "id": "DOC-003",
+    "title": "Fuel Idle Reduction Guideline (ENV-GL-02)",
+    "type": "policy",
+    "tags": [
+      "fuel",
+      "energy",
+      "idle",
+      "waiting",
+      "emissions"
+    ],
+    "content": "Engines idling longer than 5 minutes in queue consume approximately 25-30 litres per hour. Idle reduction and queue control are the primary levers for fuel intensity improvement."
+  },
+  {
+    "id": "DOC-004",
+    "title": "Haul Route Compliance Manual (OPS-MAN-07)",
+    "type": "manual",
+    "tags": [
+      "route",
+      "transportation",
+      "fuel",
+      "haul"
+    ],
+    "content": "Route deviation above 8% of planned haul distance indicates non-optimal routing or road condition issues. Survey road conditions and verify dispatch route assignments before attributing deviation to operator behaviour."
+  },
+  {
+    "id": "DOC-005",
+    "title": "Loading Unit Performance Benchmarks (OPS-BM-03)",
+    "type": "manual",
+    "tags": [
+      "shovel",
+      "cycle",
+      "motion",
+      "loading"
+    ],
+    "content": "Reference shovel swing-load cycle is 32 seconds for 4100-class shovels in blasted material. Cycles above 35 seconds suggest excess motion, poor fragmentation, or truck spotting issues."
+  },
+  {
+    "id": "DOC-006",
+    "title": "Drill & Blast Quality Assurance (DB-QA-09)",
+    "type": "procedure",
+    "tags": [
+      "drill",
+      "redrill",
+      "extra processing",
+      "fragmentation",
+      "defects"
+    ],
+    "content": "Re-drill rate should remain below 5% of drilled holes. Elevated re-drill rates are associated with collapsed holes, poor pattern marking, and increased dilution downstream."
+  },
+  {
+    "id": "DOC-007",
+    "title": "Incident Escalation & Critical Risk Controls (HSE-PR-01)",
+    "type": "procedure",
+    "tags": [
+      "safety",
+      "incident",
+      "risk",
+      "near-miss",
+      "proximity"
+    ],
+    "content": "Critical and high-severity incidents must be investigated within 24 hours. Repeat incidents on the same asset trigger a critical control verification. No automated system may override a safety stop."
+  },
+  {
+    "id": "DOC-008",
+    "title": "Continuous Improvement & Frontline Ideas Program (CI-PR-02)",
+    "type": "policy",
+    "tags": [
+      "talent",
+      "lean",
+      "root cause",
+      "improvement",
+      "repeat failure"
+    ],
+    "content": "Repeat failures without a documented root cause analysis indicate that frontline technician knowledge is not being captured. Each repeat failure should trigger a 5-Why session including operators and maintainers."
+  },
+  {
+    "id": "DOC-009",
+    "title": "Stockpile & ROM Pad Inventory Policy (PLN-PL-05)",
+    "type": "policy",
+    "tags": [
+      "inventory",
+      "stockpile",
+      "overproduction",
+      "crusher"
+    ],
+    "content": "Target ROM stockpile cover is 1.0 to 1.5 shifts of crusher feed. Mining above crusher capacity for sustained periods builds inventory that must be rehandled at additional cost."
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "INC-2041",
+    "siteId": "A",
+    "equipmentId": "EQ-A-T24",
+    "date": "2026-10-14",
+    "severity": "high",
+    "category": "equipment",
+    "description": "Hydraulic oil leak detected on T-24 during pre-start inspection.",
+    "status": "open"
+  },
+  {
+    "id": "INC-2042",
+    "siteId": "A",
+    "equipmentId": "EQ-A-SH01",
+    "date": "2026-10-09",
+    "severity": "medium",
+    "category": "near-miss",
+    "description": "Truck queue congestion at SH-01 loading zone; two trucks within minimum separation distance.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2043",
+    "siteId": "A",
+    "equipmentId": "EQ-A-SH01",
+    "date": "2026-10-16",
+    "severity": "medium",
+    "category": "near-miss",
+    "description": "Repeat queue congestion at SH-01 during night shift change.",
+    "status": "open"
+  },
+  {
+    "id": "INC-2044",
+    "siteId": "A",
+    "equipmentId": null,
+    "date": "2026-09-27",
+    "severity": "low",
+    "category": "environmental",
+    "description": "Dust suppression water cart unavailable for 3 hours on main haul road.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2045",
+    "siteId": "A",
+    "equipmentId": "EQ-A-T17",
+    "date": "2026-10-03",
+    "severity": "low",
+    "category": "equipment",
+    "description": "Tyre pressure alarm on T-17, resolved in field.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2046",
+    "siteId": "B",
+    "equipmentId": "EQ-B-T42",
+    "date": "2026-09-30",
+    "severity": "low",
+    "category": "near-miss",
+    "description": "Light vehicle entered haul road without radio call; stopped by spotter.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2047",
+    "siteId": "B",
+    "equipmentId": null,
+    "date": "2026-10-11",
+    "severity": "low",
+    "category": "environmental",
+    "description": "Minor hydrocarbon spill (<20 L) at refuelling bay, contained.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2048",
+    "siteId": "B",
+    "equipmentId": "EQ-B-D11",
+    "date": "2026-10-05",
+    "severity": "medium",
+    "category": "personnel",
+    "description": "Drill helper minor hand injury during rod change (first aid).",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2049",
+    "siteId": "C",
+    "equipmentId": "EQ-C-SH03",
+    "date": "2026-10-01",
+    "severity": "high",
+    "category": "equipment",
+    "description": "SH-03 swing brake failure during loading cycle; area isolated.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2050",
+    "siteId": "C",
+    "equipmentId": "EQ-C-SH03",
+    "date": "2026-10-13",
+    "severity": "high",
+    "category": "equipment",
+    "description": "SH-03 repeat swing brake fault; root cause not yet confirmed.",
+    "status": "open"
+  },
+  {
+    "id": "INC-2051",
+    "siteId": "C",
+    "equipmentId": "EQ-C-T53",
+    "date": "2026-10-07",
+    "severity": "critical",
+    "category": "near-miss",
+    "description": "Proximity alarm: haul truck T-53 and light vehicle at intersection 4.",
+    "status": "open"
+  },
+  {
+    "id": "INC-2052",
+    "siteId": "C",
+    "equipmentId": "EQ-C-D14",
+    "date": "2026-09-24",
+    "severity": "medium",
+    "category": "equipment",
+    "description": "Compressor overheating on D-14; drilling stopped 5 hours.",
+    "status": "closed"
+  },
+  {
+    "id": "INC-2053",
+    "siteId": "C",
+    "equipmentId": null,
+    "date": "2026-10-17",
+    "severity": "medium",
+    "category": "environmental",
+    "description": "Pit dewatering pump outage; bench flooding risk flagged.",
+    "status": "open"
+  },
+  {
+    "id": "INC-2054",
+    "siteId": "C",
+    "equipmentId": "EQ-C-L12",
+    "date": "2026-09-29",
+    "severity": "low",
+    "category": "personnel",
+    "description": "Operator fatigue report on extended night shift.",
+    "status": "closed"
+  }
+]

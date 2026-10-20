@@ -1,0 +1,182 @@
+[
+  {
+    "id": "EQ-A-T24",
+    "siteId": "A",
+    "code": "T-24",
+    "type": "haul_truck",
+    "model": "CAT 793F",
+    "criticality": 4,
+    "commissioned": "2015-01-15",
+    "pmOffset": 0
+  },
+  {
+    "id": "EQ-A-T31",
+    "siteId": "A",
+    "code": "T-31",
+    "type": "haul_truck",
+    "model": "CAT 793F",
+    "criticality": 4,
+    "commissioned": "2018-02-15",
+    "pmOffset": 1
+  },
+  {
+    "id": "EQ-A-T17",
+    "siteId": "A",
+    "code": "T-17",
+    "type": "haul_truck",
+    "model": "Komatsu 930E",
+    "criticality": 4,
+    "commissioned": "2021-03-15",
+    "pmOffset": 2
+  },
+  {
+    "id": "EQ-A-SH01",
+    "siteId": "A",
+    "code": "SH-01",
+    "type": "shovel",
+    "model": "P&H 4100XPC",
+    "criticality": 5,
+    "commissioned": "2016-04-15",
+    "pmOffset": 3
+  },
+  {
+    "id": "EQ-A-L05",
+    "siteId": "A",
+    "code": "L-05",
+    "type": "loader",
+    "model": "CAT 994K",
+    "criticality": 3,
+    "commissioned": "2019-05-15",
+    "pmOffset": 4
+  },
+  {
+    "id": "EQ-A-D07",
+    "siteId": "A",
+    "code": "D-07",
+    "type": "drill",
+    "model": "Epiroc Pit Viper 271",
+    "criticality": 3,
+    "commissioned": "2014-06-15",
+    "pmOffset": 5
+  },
+  {
+    "id": "EQ-B-T40",
+    "siteId": "B",
+    "code": "T-40",
+    "type": "haul_truck",
+    "model": "CAT 793F",
+    "criticality": 4,
+    "commissioned": "2016-01-15",
+    "pmOffset": 0
+  },
+  {
+    "id": "EQ-B-T42",
+    "siteId": "B",
+    "code": "T-42",
+    "type": "haul_truck",
+    "model": "Komatsu 930E",
+    "criticality": 4,
+    "commissioned": "2019-02-15",
+    "pmOffset": 1
+  },
+  {
+    "id": "EQ-B-T45",
+    "siteId": "B",
+    "code": "T-45",
+    "type": "haul_truck",
+    "model": "Komatsu 930E",
+    "criticality": 4,
+    "commissioned": "2014-03-15",
+    "pmOffset": 2
+  },
+  {
+    "id": "EQ-B-SH02",
+    "siteId": "B",
+    "code": "SH-02",
+    "type": "shovel",
+    "model": "P&H 4100XPC",
+    "criticality": 5,
+    "commissioned": "2017-04-15",
+    "pmOffset": 3
+  },
+  {
+    "id": "EQ-B-L08",
+    "siteId": "B",
+    "code": "L-08",
+    "type": "loader",
+    "model": "CAT 994K",
+    "criticality": 3,
+    "commissioned": "2020-05-15",
+    "pmOffset": 4
+  },
+  {
+    "id": "EQ-B-D11",
+    "siteId": "B",
+    "code": "D-11",
+    "type": "drill",
+    "model": "Epiroc Pit Viper 271",
+    "criticality": 3,
+    "commissioned": "2015-06-15",
+    "pmOffset": 5
+  },
+  {
+    "id": "EQ-C-T51",
+    "siteId": "C",
+    "code": "T-51",
+    "type": "haul_truck",
+    "model": "CAT 793F",
+    "criticality": 4,
+    "commissioned": "2017-01-15",
+    "pmOffset": 0
+  },
+  {
+    "id": "EQ-C-T53",
+    "siteId": "C",
+    "code": "T-53",
+    "type": "haul_truck",
+    "model": "CAT 793F",
+    "criticality": 4,
+    "commissioned": "2020-02-15",
+    "pmOffset": 1
+  },
+  {
+    "id": "EQ-C-T58",
+    "siteId": "C",
+    "code": "T-58",
+    "type": "haul_truck",
+    "model": "Komatsu 930E",
+    "criticality": 4,
+    "commissioned": "2015-03-15",
+    "pmOffset": 2
+  },
+  {
+    "id": "EQ-C-SH03",
+    "siteId": "C",
+    "code": "SH-03",
+    "type": "shovel",
+    "model": "Komatsu PC8000",
+    "criticality": 5,
+    "commissioned": "2018-04-15",
+    "pmOffset": 3
+  },
+  {
+    "id": "EQ-C-L12",
+    "siteId": "C",
+    "code": "L-12",
+    "type": "loader",
+    "model": "CAT 994K",
+    "criticality": 3,
+    "commissioned": "2021-05-15",
+    "pmOffset": 4
+  },
+  {
+    "id": "EQ-C-D14",
+    "siteId": "C",
+    "code": "D-14",
+    "type": "drill",
+    "model": "Sandvik DR416i",
+    "criticality": 3,
+    "commissioned": "2016-06-15",
+    "pmOffset": 5
+  }
+]
