@@ -1,0 +1,65 @@
+[
+  {
+    "id": "A",
+    "name": "Site A",
+    "region": "Northern Highlands (synthetic)",
+    "mineType": "Open-pit copper",
+    "targetTonsPerShift": 7600,
+    "crusherCapacityPerShift": 7000,
+    "profile": {
+      "waiting": [
+        0.14,
+        0.19
+      ],
+      "routeDev": [
+        10,
+        14
+      ],
+      "cycleSec": 36,
+      "redrill": 4.2,
+      "rework": 0.016
+    }
+  },
+  {
+    "id": "B",
+    "name": "Site B",
+    "region": "Central Plateau (synthetic)",
+    "mineType": "Open-pit copper",
+    "targetTonsPerShift": 7600,
+    "crusherCapacityPerShift": 7900,
+    "profile": {
+      "waiting": [
+        0.055,
+        0.08
+      ],
+      "routeDev": [
+        4,
+        6
+      ],
+      "cycleSec": 31,
+      "redrill": 3.1,
+      "rework": 0.009
+    }
+  },
+  {
+    "id": "C",
+    "name": "Site C",
+    "region": "Southern Valley (synthetic)",
+    "mineType": "Open-pit copper-gold",
+    "targetTonsPerShift": 7600,
+    "crusherCapacityPerShift": 7300,
+    "profile": {
+      "waiting": [
+        0.1,
+        0.13
+      ],
+      "routeDev": [
+        7,
+        9
+      ],
+      "cycleSec": 38,
+      "redrill": 8.8,
+      "rework": 0.034
+    }
+  }
+]

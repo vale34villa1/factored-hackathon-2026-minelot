@@ -1,0 +1,10 @@
+{
+  "name": "MINeLOT synthetic demo dataset",
+  "version": "1.0.0",
+  "seed": 20261018,
+  "synthetic": true,
+  "startDate": "2026-09-19",
+  "endDate": "2026-10-18",
+  "generatedBy": "scripts/generate-data.mjs",
+  "notice": "All records are synthetic and generated for demonstration only. They do not represent any real mine, company, or person."
+}
