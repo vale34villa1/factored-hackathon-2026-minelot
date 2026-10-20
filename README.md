@@ -173,6 +173,46 @@ factored-hackathon-2026-minelot/
 └── ARCHITECTURE.md
 ```
 
+Implement the following:
+
+- Deployment readiness: Prepare the frontend for Vercel deployment if compatible with the existing stack.
+
+  Prepare the FastAPI backend for Render deployment if a Python backend exists.
+  Add deployment instructions, health checks, environment-variable documentation, and appropriate configuration files.
+  Document how to obtain separate frontend and backend public URLs and configure CORS safely.
+  RocketRide
+
+  Evaluate whether it can add value to the existing AI pipeline.
+  If credentials and documentation are available, implement an optional adapter behind a feature flag.
+  Preserve a working fallback if RocketRide is not configured.
+
+- PromptQL: Evaluate integration for natural-language queries over authorized structured operational data. Do not assume a public API or invent endpoints. Implement only against verified official documentation and available credentials.
+
+- Snyk: Add an optional security workflow to scan project dependencies and source code. Use official supported actions and document setup. Do not commit tokens or secrets.
+
+- CelestoAI: Evaluate its official SDK for isolated agent execution or related useful workflows. Implement an optional adapter only if compatible with the current architecture. Never execute untrusted code on the production host.
+
+Configuration
+
+Update .env.example with documented placeholder variables for optional integrations.
+
+Never place actual API keys in source code, frontend variables, logs, or commits.
+
+Make missing optional integrations fail gracefully.
+
+Documentation
+
+Update README.md with the architecture, integration status, setup instructions, deployment steps, Live URL placeholders, and a clear distinction between implemented, optional, and not-yet-configured features.
+
+Add tests for configuration and integration fallbacks.
+
+Validation
+
+Run existing tests and build checks.
+
+Fix regressions.
+
+Report the exact files changed, commands executed, remaining setup steps, and any credentials or external accounts required.
 ---
 
 ## API Endpoints
@@ -292,6 +332,9 @@ npm test
 
 ---
 
+<img width="990" height="522" alt="image" src="https://github.com/user-attachments/assets/202818c1-b63b-41a7-831e-c38837b4fe10" />
+
+---
 ## Evaluation Framework
 
 30+ test questions covering:
@@ -324,8 +367,11 @@ Benjamin Ghinno - FIIS UNI - PERU
 Valeria Villacorta  - FIIS UNI - PERU
 
 **Roles:**
+
 Benjamin Ghinno IA + ML + DATA engineer
+
 Valeria Villacorta Machine Learning + Logistic + Mine
+
 ---
 
 ## License
