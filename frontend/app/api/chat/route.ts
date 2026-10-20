@@ -1,6 +1,8 @@
 import {
   convertToModelMessages,
+  createUIMessageStream,
   createUIMessageStreamResponse,
+  generateId,
   isStepCount,
   streamText,
   tool,
@@ -16,6 +18,7 @@ import { buildRecommendations } from '@/lib/analytics/recommendations'
 import { scoreEquipmentRisk } from '@/lib/analytics/risk'
 import { sliceDataset } from '@/lib/analytics/kpis'
 import { SimulationInputSchema, runSimulation } from '@/lib/analytics/simulation'
+import { answerOffline } from '@/lib/copilot/offline'
 import { dataset } from '@/lib/data/dataset'
 
 export const maxDuration = 60
@@ -88,6 +91,12 @@ export async function POST(req: Request) {
   if (!parsed.success) return Response.json({ error: 'Invalid request' }, { status: 400 })
   const messages = parsed.data.messages as UIMessage[]
 
+  const question = lastUserText(messages)
+
+  if (Date.now() < gatewayUnavailableUntil) {
+    return createUIMessageStreamResponse({ stream: offlineStream(question) })
+  }
+
   const result = streamText({
     model: 'openai/gpt-5.4-mini',
     system: SYSTEM,
@@ -96,16 +105,72 @@ export async function POST(req: Request) {
     stopWhen: isStepCount(6),
   })
 
+  const live = toUIMessageStream({
+    stream: result.stream,
+    onError: (error) => {
+      const message = error instanceof Error ? error.message : String(error)
+      return GATEWAY_ERROR.test(message) ? GATEWAY_SENTINEL : 'The copilot could not answer right now. Please try again.'
+    },
+  })
+
   return createUIMessageStreamResponse({
-    stream: toUIMessageStream({
-      stream: result.stream,
-      onError: (error) => {
-        const message = error instanceof Error ? error.message : String(error)
-        if (/credit card|customer_verification/i.test(message)) {
-          return 'AI Gateway is not enabled for this Vercel team yet. Add a payment method in the Vercel dashboard (AI Gateway) to unlock free credits. All dashboards keep working without it.'
+    stream: createUIMessageStream({
+      execute: async ({ writer }) => {
+        const buffered: Parameters<typeof writer.write>[0][] = []
+        let committed = false
+        const reader = live.getReader()
+        while (true) {
+          const { done, value: chunk } = await reader.read()
+          if (done) break
+          if (!committed) {
+            if (chunk.type === 'error' && chunk.errorText === GATEWAY_SENTINEL) {
+              gatewayUnavailableUntil = Date.now() + GATEWAY_RETRY_MS
+              writer.merge(offlineStream(question))
+              return
+            }
+            buffered.push(chunk)
+            if (!PREAMBLE_CHUNKS.has(chunk.type)) {
+              committed = true
+              buffered.forEach((c) => writer.write(c))
+            }
+            continue
+          }
+          writer.write(chunk)
         }
-        return 'The copilot could not answer right now. Please try again.'
+        if (!committed) buffered.forEach((c) => writer.write(c))
       },
     }),
+  })
+}
+
+const GATEWAY_ERROR = /credit card|customer_verification|unauthori[sz]ed|api key|authentication|forbidden/i
+const GATEWAY_SENTINEL = '__gateway_unavailable__'
+const GATEWAY_RETRY_MS = 5 * 60 * 1000
+const PREAMBLE_CHUNKS = new Set(['start', 'start-step'])
+let gatewayUnavailableUntil = 0
+
+function lastUserText(messages: UIMessage[]): string {
+  const last = [...messages].reverse().find((m) => m.role === 'user')
+  return (
+    last?.parts
+      .filter((p): p is { type: 'text'; text: string } => p.type === 'text')
+      .map((p) => p.text)
+      .join(' ')
+      .slice(0, 500) ?? ''
+  )
+}
+
+function offlineStream(question: string) {
+  return createUIMessageStream({
+    execute: ({ writer }) => {
+      const { tool: toolName, text } = answerOffline(question)
+      const toolCallId = generateId()
+      writer.write({ type: 'tool-input-available', toolCallId, toolName, input: { question } })
+      writer.write({ type: 'tool-output-available', toolCallId, output: { mode: 'offline' } })
+      const id = generateId()
+      writer.write({ type: 'text-start', id })
+      writer.write({ type: 'text-delta', id, delta: text })
+      writer.write({ type: 'text-end', id })
+    },
   })
 }
